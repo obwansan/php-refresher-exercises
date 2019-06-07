@@ -34,6 +34,7 @@ $q = $_REQUEST['q'];
 $suggestion = "";
 
 if($q !== "") {
+  // Don't actually need to lowercase $q as stristr() is case insensitive
   $q = strtolower($q);
   $len = strlen($q);
   foreach($people as $person) {
